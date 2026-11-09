@@ -181,6 +181,15 @@
     });
   }
 
+  /* ---------- email: en escritorio abre directamente la redacción en Gmail ---------- */
+  var canHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (canHover) {
+    var gm = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(D.email) + '&su=' + encodeURIComponent('Contacto desde tu portfolio');
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); window.open(gm, '_blank', 'noopener'); });
+    });
+  }
+
   /* ---------- reloj de Sevilla ---------- */
   var clock = $('#clock');
   function tick() {
