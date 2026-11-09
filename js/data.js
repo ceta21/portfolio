@@ -45,7 +45,8 @@ window.DATA = {
 
   // Proyectos propios — edita, añade o borra a tu gusto. [nombre, descripción, tecnologías, enlace (opcional)]
   proyectos: [
-    ['Endless Rift', 'Juego web propio, publicado y jugable en el navegador.', 'Web · Vercel', 'https://endless-rift.vercel.app']
+    ['Endless Rift', 'Juego web propio, publicado y jugable en el navegador.', 'Web · Vercel', 'https://endless-rift.vercel.app'],
+    ['GALEON', 'Web corporativa de una consultora de inteligencia artificial, con formulario de contacto y asistente de chat con IA.', 'Next.js · React · TypeScript', 'https://github.com/ceta21/web-galeon']
   ],
 
   competencias: ['Java', 'JavaScript', 'PHP', 'CodeIgniter 4', 'Node.js', 'React', 'Bootstrap', 'SQL Server', 'Codex / Claude Code'],
