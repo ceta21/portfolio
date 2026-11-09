@@ -71,7 +71,7 @@
   };
   $('#skills').innerHTML = D.competencias.map(function (c, i) { return '<li class="reveal" style="--d:' + Math.min(i, 5) * 0.05 + 's"><span class="n">' + pad2(i + 1) + '</span><span class="ico">' + (ICONS[c] || '') + '</span><strong>' + esc(c) + '</strong></li>'; }).join('');
   $('#aptitudes').innerHTML = D.aptitudes.map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('');
-  $('#idiomas').innerHTML = D.idiomas.map(function (l) {
+  $('#idiomas-list').innerHTML = D.idiomas.map(function (l) {
     return '<div class="lang"><div class="lang__lvl">' + esc(l.nivel) + '</div><div class="lang__body"><b>' + esc(l.n) + '</b><span class="lang__sub mono">Nivel ' + esc(l.nivel) + '</span><div class="lang__chips">' +
       l.chips.map(function (c, i) { return '<span class="pill' + (i ? ' pill--wip' : '') + '">' + esc(c) + '</span>'; }).join('') + '</div></div></div>';
   }).join('');

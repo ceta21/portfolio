@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body>
   <div class="progress" id="progress"></div>
@@ -21,7 +21,8 @@
       <a href="#experiencia">03 Experiencia</a>
       <a href="#proyectos">04 Proyectos</a>
       <a href="#competencias">05 Competencias</a>
-      <a href="#contacto">06 Contacto</a>
+      <a href="#idiomas">06 Idiomas</a>
+      <a href="#contacto">07 Contacto</a>
     </nav>
     <div class="top__clock mono" id="clock" aria-hidden="true">Sevilla —:—</div>
   </header>
@@ -92,22 +93,27 @@
       <div class="sec__head grid"><span class="num mono">05</span><h2>Competencias</h2></div>
       <ul class="skills" id="skills"></ul>
       <div class="grid cols3">
-        <div class="card card--lang c-1-7 reveal"><h3 class="sub-s mono">Idiomas</h3><div id="idiomas"></div></div>
+        <div class="card-apt c-1-7 reveal"><h3 class="sub-s mono">Aptitudes</h3><ul class="chips" id="aptitudes"></ul></div>
         <div class="card card--other c-8-12 reveal" style="--d:.1s"><h3 class="sub-s mono">Otros datos</h3><ul class="otros" id="otros"></ul></div>
-        <div class="card-apt c-1-12 reveal" style="--d:.15s"><h3 class="sub-s mono">Aptitudes</h3><ul class="chips" id="aptitudes"></ul></div>
       </div>
+    </section>
+
+    <!-- IDIOMAS -->
+    <section class="sec" id="idiomas">
+      <div class="sec__head grid"><span class="num mono">06</span><h2>Idiomas</h2></div>
+      <div class="grid cols3"><div class="card card--lang c-1-12 reveal"><div id="idiomas-list"></div></div></div>
     </section>
 
     <!-- CONTACTO -->
     <section class="sec sec--dark" id="contacto">
-      <div class="sec__head grid"><span class="num mono">06</span><h2>Contacto</h2></div>
+      <div class="sec__head grid"><span class="num mono">07</span><h2>Contacto</h2></div>
       <a class="mail" id="mail" href="#"><span class="mail__in" id="mail-text"></span></a>
       <div class="grid contact" id="contact"></div>
       <footer class="foot grid mono"><span class="c-1-6">© 2026 Gabriel Vigo Rodríguez</span><a class="c-9-12 right" href="#inicio">Volver arriba ↑</a></footer>
     </section>
   </main>
 
-  <script src="js/data.js?v=11"></script>
-  <script src="js/app.js?v=11"></script>
+  <script src="js/data.js?v=12"></script>
+  <script src="js/app.js?v=12"></script>
 </body>
 </html>
