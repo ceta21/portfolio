@@ -57,7 +57,19 @@
     proy.appendChild(li);
   });
 
-  $('#skills').innerHTML = D.competencias.map(function (c, i) { return '<li class="reveal" style="--d:' + Math.min(i, 5) * 0.05 + 's"><span class="n">' + pad2(i + 1) + '</span><strong>' + esc(c) + '</strong></li>'; }).join('');
+  var S = function (b) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + b + '</svg>'; };
+  var ICONS = {
+    'Java': S('<path d="M4 10h12v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M7 3c-1 1.2 1 2 0 3.2M11 3c-1 1.2 1 2 0 3.2"/>'),
+    'JavaScript': S('<path d="M8 4C6 4 5.5 5 5.5 6.5v2c0 1.5-.8 3.5-2.500 3.500 1.700 0 2.500 2 2.500 3.500v2C5.500 19 6 20 8 20"/><path d="M16 4c2 0 2.500 1 2.500 2.500v2c0 1.500.8 3.500 2.500 3.500-1.700 0-2.500 2-2.500 3.500v2c0 1.500-.5 2.500-2.500 2.500"/>'),
+    'PHP': S('<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M8.5 17v-3h1.200a1 1 0 0 1 0 2H8.500M12 17v-3M12 15.500h1.500M15 17v-3M15 15.500h1.500"/>'),
+    'Bootstrap': S('<rect x="3.500" y="3.500" width="17" height="17" rx="4"/><path d="M9.500 7.500h3a2 2 0 0 1 0 4h-3zM9.500 11.500h3.500a2.250 2.250 0 0 1 0 4.500H9.500z"/>'),
+    'SQL Server': S('<ellipse cx="12" cy="5.500" rx="7" ry="2.500"/><path d="M5 5.500v13c0 1.400 3.100 2.500 7 2.500s7-1.100 7-2.500v-13"/><path d="M5 12c0 1.400 3.100 2.500 7 2.500s7-1.100 7-2.500"/>'),
+    'CodeIgniter 4': S('<path d="M12 3c.5 3.500 5.500 5.500 5.500 10.500a5.500 5.500 0 0 1-11 0c0-2 1-3.500 2-4.500.2 1.500 1 2.200 1.800 2.500C10 9 10.500 5.500 12 3z"/>'),
+    'Node.js': S('<path d="M12 2.500 20 7v10l-8 4.500L4 17V7z"/>'),
+    'React': S('<circle cx="12" cy="12" r="1.600"/><ellipse cx="12" cy="12" rx="9" ry="3.600"/><ellipse cx="12" cy="12" rx="9" ry="3.600" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.600" transform="rotate(120 12 12)"/>'),
+    'Codex / Claude Code': S('<rect x="4" y="8" width="16" height="11" rx="3.500"/><path d="M12 8V5M10 3.500h4"/><circle cx="9" cy="13" r=".9" fill="currentColor"/><circle cx="15" cy="13" r=".9" fill="currentColor"/><path d="M9.500 16.200h5"/><path d="M2.500 12.500v3M21.500 12.500v3"/>')
+  };
+  $('#skills').innerHTML = D.competencias.map(function (c, i) { return '<li class="reveal" style="--d:' + Math.min(i, 5) * 0.05 + 's"><span class="n">' + pad2(i + 1) + '</span><span class="ico">' + (ICONS[c] || '') + '</span><strong>' + esc(c) + '</strong></li>'; }).join('');
   $('#aptitudes').innerHTML = D.aptitudes.map(function (a) { return '<li class="reveal">' + esc(a) + '</li>'; }).join('');
   $('#idiomas').innerHTML = D.idiomas.map(function (a) { return '<li class="reveal">' + esc(a[0]) + '<small>' + esc(a[1]) + '</small></li>'; }).join('');
   $('#otros').innerHTML = D.otros.map(function (a) { return '<li class="reveal">' + esc(a) + '</li>'; }).join('');
