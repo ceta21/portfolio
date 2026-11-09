@@ -70,7 +70,11 @@
     '<div class="reveal" style="--d:.16s"><small class="mono">Ubicación</small><b>' + esc(D.ubicacion) + '</b></div>';
 
   // títulos de sección: envolver para la máscara
-  document.querySelectorAll('.sec__head h2').forEach(function (h) { h.innerHTML = '<span>' + h.innerHTML + '</span>'; });
+  document.querySelectorAll('.sec__head h2').forEach(function (h) {
+    var t = h.textContent, k = 0;
+    h.setAttribute('aria-label', t);
+    h.innerHTML = '<span aria-hidden="true">' + t.split('').map(function (c) { return '<span class="ch" style="--i:' + (k++) + '">' + (c === ' ' ? '&nbsp;' : c) + '</span>'; }).join('') + '</span>';
+  });
 
   /* ---------- entrada del hero ---------- */
   requestAnimationFrame(function () { setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 120); });
@@ -102,6 +106,8 @@
   var navLinks = [].slice.call(document.querySelectorAll('.top__nav a'));
   var secs = navLinks.map(function (a) { return $(a.getAttribute('href')); });
   var ticking = false;
+  var skillLis = [].slice.call(document.querySelectorAll('.skills li'));
+  var lastY = window.scrollY, vel = 0;
 
   function frame() {
     ticking = false;
@@ -122,6 +128,14 @@
         im.style.transform = 'translateY(' + (-p * 8) + '%)';
       });
     }
+    if (!reduce) {
+      skillLis.forEach(function (li, i) {
+        var r = li.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > innerHeight) return;
+        var p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+        li.style.setProperty('--dx', (p * (i % 2 ? -5 : 5)) + 'vw');
+      });
+    }
     var cur = -1;
     secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < innerHeight * 0.4) cur = i; });
     navLinks.forEach(function (a, i) { a.classList.toggle('on', i === cur); });
@@ -129,6 +143,28 @@
   window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
   window.addEventListener('resize', frame);
   frame();
+
+  /* ---------- marquee: la velocidad sigue al scroll ---------- */
+  if (!reduce && track.getAnimations) {
+    (function loop() {
+      var y = window.scrollY, d = Math.abs(y - lastY); lastY = y;
+      vel += (Math.min(d, 60) / 12 - vel) * 0.08;
+      var a = track.getAnimations()[0];
+      if (a) a.playbackRate = 1 + vel * 2.2;
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  /* ---------- botones magnéticos ---------- */
+  if (!reduce && window.matchMedia('(hover:hover)').matches) {
+    document.querySelectorAll('.btn').forEach(function (b) {
+      b.addEventListener('mousemove', function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.translate = ((e.clientX - r.left - r.width / 2) * 0.22) + 'px ' + ((e.clientY - r.top - r.height / 2) * 0.35) + 'px';
+      });
+      b.addEventListener('mouseleave', function () { b.style.translate = ''; });
+    });
+  }
 
   /* ---------- reloj de Sevilla ---------- */
   var clock = $('#clock');
