@@ -45,9 +45,7 @@ window.DATA = {
 
   // Proyectos propios — edita, añade o borra a tu gusto. [nombre, descripción, tecnologías, enlace (opcional)]
   proyectos: [
-    ['Endless Rift', 'Juego web propio, publicado y jugable en el navegador.', 'Web · Vercel', 'https://endless-rift.vercel.app'],
-    ['Foggy Mind Studios', 'Web minimalista para una marca de ropa, con catálogo organizado por drops.', 'CodeIgniter 4 · PHP'],
-    ['Valorant Survivors', 'Juego web estilo survivor con renderizado en canvas.', 'React · TypeScript · Canvas']
+    ['Endless Rift', 'Juego web propio, publicado y jugable en el navegador.', 'Web · Vercel', 'https://endless-rift.vercel.app']
   ],
 
   competencias: ['Java', 'JavaScript', 'PHP', 'CodeIgniter 4', 'Node.js', 'React', 'Bootstrap', 'SQL Server', 'Codex / Claude Code'],
