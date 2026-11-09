@@ -18,7 +18,7 @@ window.DATA = {
 
   stats: [
     { n: 154, suf: 'h', t: 'Prácticas en empresa' },
-    { n: 5, suf: '', t: 'Cursos complementarios en 2026' },
+    { n: 5, suf: '', t: 'Cursos complementarios' },
     { n: 9, suf: '', t: 'Competencias digitales' },
     { n: 'B2', suf: '', t: 'Inglés · certificación Cambridge B2 en proceso' }
   ],
@@ -31,7 +31,7 @@ window.DATA = {
 
   // [título, centro, fecha, certificado (opcional)]
   cursos: [
-    ['Gestión de Proyectos y Fundamentos de metodología Agile', 'Santander Open Academy', '2026'],
+    ['Gestión de Proyectos y Fundamentos de metodología Agile', 'Santander Open Academy · 8 h', 'Nov 2025', 'certificados/santander-agile.pdf'],
     ['CodeIgniter 4 desde cero: CRUD, tienda online y API REST', 'Udemy · 64,5 h', 'Jun 2026', 'certificados/udemy-codeigniter-4.pdf'],
     ['Desarrollo Profesional en Data e Inteligencia Artificial para la Toma de Decisiones Empresariales', 'Escuela de Empresa', '2026'],
     ['Desarrollo con IA: Programa con Agentes', 'BIG school (mouredev) · 6 h', 'Ago 2026', 'certificados/bigschool-programa-con-agentes.pdf'],
