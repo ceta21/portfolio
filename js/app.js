@@ -107,6 +107,7 @@
     ticking = false;
     var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
     bar.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+    if (!reduce && y < hero.offsetHeight * 1.5) hero.style.setProperty('--sy', y);
     if (!reduce) {
       var hh = hero.offsetHeight;
       if (y < hh * 1.2) {
