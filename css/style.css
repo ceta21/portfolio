@@ -222,9 +222,8 @@ ul{list-style:none}
 .row.in::after{animation:draw 1.5s var(--ease) var(--d,0s) both}
 @keyframes draw{0%{transform:scaleX(0);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}50.1%{transform:scaleX(1);transform-origin:right}100%{transform:scaleX(0);transform-origin:right}}
 /* estadísticas: cortina */
-.stat:not(.in){clip-path:inset(0 0 100% 0)}
-.stat.in{animation:wipe 1s var(--ease) var(--d,0s) both}
-@keyframes wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+.stat__n,.stat__t{transition:translate .9s var(--ease) calc(var(--d,0s) + .1s)}
+.stat:not(.in) .stat__n,.stat:not(.in) .stat__t{translate:0 30px}
 /* competencias: deriva con el scroll */
 .skills li strong{translate:var(--dx,0) 0}
 /* marcador de color en las filas de proyecto */
@@ -233,5 +232,5 @@ ul{list-style:none}
 
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-  .line__in,.sec__head h2>span,.mail__in{transform:none}.reveal{opacity:1;transform:none}.reveal-clip .ph{opacity:1}.reveal-clip img{scale:1}.exp__photo figcaption{opacity:1}.sec__head::after{transform:none}.sec__head h2 .ch{transform:none}.hero__meta,.hero__intro,.hero__cta .btn,.marquee{opacity:1;translate:none}.stat:not(.in){clip-path:none}.row::after{display:none}.dot{opacity:1;transform:none}
+  .line__in,.sec__head h2>span,.mail__in{transform:none}.reveal{opacity:1;transform:none}.reveal-clip .ph{opacity:1}.reveal-clip img{scale:1}.exp__photo figcaption{opacity:1}.sec__head::after{transform:none}.sec__head h2 .ch{transform:none}.hero__meta,.hero__intro,.hero__cta .btn,.marquee{opacity:1;translate:none}.row::after{display:none}.dot{opacity:1;transform:none}
 }
