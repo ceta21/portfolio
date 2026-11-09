@@ -124,11 +124,12 @@ ul{list-style:none}
 .row__s{color:var(--mute);font-size:.92rem;transition:color .4s}
 .row:hover .row__s{color:#CFE0FF}
 .row__d{text-align:right}
-.row__a{display:inline-flex;align-items:center;gap:.5rem;margin-top:.4rem;color:var(--accent);font-weight:600;font-size:.82rem}
+.row__a{display:flex;width:max-content;align-items:center;gap:.5rem;margin-top:.4rem;color:var(--accent);font-weight:600;font-size:.82rem}
 .row__a::after{content:"↗";transition:transform .4s var(--ease)}
 .row__a:hover::after{transform:translate(3px,-3px)}
 .row:hover .row__a{color:var(--cyan)}
 .sub{margin:clamp(2.5rem,6vw,5rem) 0 1rem}
+.sub--first{margin-top:0}
 .rows--proj .row__t a::after{content:"";position:absolute;inset:0;z-index:2}
 .rows--proj .row:has(a){cursor:pointer}
 .rows--proj .row__t a:focus-visible::after{outline:2px solid var(--accent);outline-offset:-2px}
