@@ -70,9 +70,12 @@
     'Codex / Claude Code': S('<rect x="4" y="8" width="16" height="11" rx="3.500"/><path d="M12 8V5M10 3.500h4"/><circle cx="9" cy="13" r=".9" fill="currentColor"/><circle cx="15" cy="13" r=".9" fill="currentColor"/><path d="M9.500 16.200h5"/><path d="M2.500 12.500v3M21.500 12.500v3"/>')
   };
   $('#skills').innerHTML = D.competencias.map(function (c, i) { return '<li class="reveal" style="--d:' + Math.min(i, 5) * 0.05 + 's"><span class="n">' + pad2(i + 1) + '</span><span class="ico">' + (ICONS[c] || '') + '</span><strong>' + esc(c) + '</strong></li>'; }).join('');
-  $('#aptitudes').innerHTML = D.aptitudes.map(function (a) { return '<li class="reveal">' + esc(a) + '</li>'; }).join('');
-  $('#idiomas').innerHTML = D.idiomas.map(function (a) { return '<li class="reveal">' + esc(a[0]) + '<small>' + esc(a[1]) + '</small></li>'; }).join('');
-  $('#otros').innerHTML = D.otros.map(function (a) { return '<li class="reveal">' + esc(a) + '</li>'; }).join('');
+  $('#aptitudes').innerHTML = D.aptitudes.map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('');
+  $('#idiomas').innerHTML = D.idiomas.map(function (l) {
+    return '<div class="lang"><div class="lang__lvl">' + esc(l.nivel) + '</div><div class="lang__body"><b>' + esc(l.n) + '</b><span class="lang__sub mono">Nivel ' + esc(l.nivel) + '</span><div class="lang__chips">' +
+      l.chips.map(function (c, i) { return '<span class="pill' + (i ? ' pill--wip' : '') + '">' + esc(c) + '</span>'; }).join('') + '</div></div></div>';
+  }).join('');
+  $('#otros').innerHTML = D.otros.map(function (a) { return '<li><span class="ico">' + S('<path d="M4 15v-3l2-5h12l2 5v3"/><rect x="3" y="12" width="18" height="5" rx="1.500"/><circle cx="7.500" cy="17" r="1.600"/><circle cx="16.500" cy="17" r="1.600"/>') + '</span><b>' + esc(a) + '</b></li>'; }).join('');
 
   $('#mail').href = 'mailto:' + D.email;
   $('#mail-text').textContent = D.email;

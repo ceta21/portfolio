@@ -51,6 +51,6 @@ window.DATA = {
 
   competencias: ['Java', 'JavaScript', 'PHP', 'CodeIgniter 4', 'Node.js', 'React', 'Bootstrap', 'SQL Server', 'Codex / Claude Code'],
   aptitudes: ['Trabajo en equipo', 'Trabajador', 'Capacidad de liderazgo', 'Empático', 'Resolución de conflictos'],
-  idiomas: [['Inglés', 'Nivel B2 · Titulación Cambridge B1 acreditada · Certificación Cambridge B2 en proceso de obtención']],
+  idiomas: [{ n: 'Inglés', nivel: 'B2', chips: ['Titulación Cambridge B1 acreditada', 'Certificación Cambridge B2 en proceso'] }],
   otros: ['Carnet de conducir']
 };

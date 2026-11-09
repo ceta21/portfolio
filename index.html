@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
   <div class="progress" id="progress"></div>
@@ -92,9 +92,9 @@
       <div class="sec__head grid"><span class="num mono">05</span><h2>Competencias</h2></div>
       <ul class="skills" id="skills"></ul>
       <div class="grid cols3">
-        <div class="c-1-4"><h3 class="sub-s mono">Aptitudes</h3><ul class="plain" id="aptitudes"></ul></div>
-        <div class="c-5-8"><h3 class="sub-s mono">Idiomas</h3><ul class="plain" id="idiomas"></ul></div>
-        <div class="c-9-12"><h3 class="sub-s mono">Otros datos</h3><ul class="plain" id="otros"></ul></div>
+        <div class="card card--lang c-1-7 reveal"><h3 class="sub-s mono">Idiomas</h3><div id="idiomas"></div></div>
+        <div class="card card--other c-8-12 reveal" style="--d:.1s"><h3 class="sub-s mono">Otros datos</h3><ul class="otros" id="otros"></ul></div>
+        <div class="card-apt c-1-12 reveal" style="--d:.15s"><h3 class="sub-s mono">Aptitudes</h3><ul class="chips" id="aptitudes"></ul></div>
       </div>
     </section>
 
@@ -107,7 +107,7 @@
     </section>
   </main>
 
-  <script src="js/data.js?v=10"></script>
-  <script src="js/app.js?v=10"></script>
+  <script src="js/data.js?v=11"></script>
+  <script src="js/app.js?v=11"></script>
 </body>
 </html>
