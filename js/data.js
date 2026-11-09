@@ -31,11 +31,11 @@ window.DATA = {
 
   // [título, centro, fecha, certificado (opcional)]
   cursos: [
-    ['Gestión de Proyectos y Fundamentos de metodología Agile', 'Santander Open Academy · 8 h', 'Nov 2025', 'certificados/santander-agile.pdf'],
-    ['CodeIgniter 4 desde cero: CRUD, tienda online y API REST', 'Udemy · 64,5 h', 'Jun 2026', 'certificados/udemy-codeigniter-4.pdf'],
+    ['Gestión de Proyectos y Fundamentos de metodología Agile', 'Santander Open Academy · 8 h', 'Noviembre 2025', 'certificados/santander-agile.pdf'],
+    ['CodeIgniter 4 desde cero: CRUD, tienda online y API REST', 'Udemy · 64,5 h', 'Junio 2026', 'certificados/udemy-codeigniter-4.pdf'],
     ['Desarrollo Profesional en Data e Inteligencia Artificial para la Toma de Decisiones Empresariales', 'Escuela de Empresa', '2026'],
-    ['Desarrollo con IA: Programa con Agentes', 'BIG school (mouredev) · 6 h', 'Ago 2026', 'certificados/bigschool-programa-con-agentes.pdf'],
-    ['Desarrollo con IA: de 0 a Producción', 'BIG school (mouredev) · 6 h', 'Ago 2026', 'certificados/bigschool-de-0-a-produccion.pdf']
+    ['Desarrollo con IA: Programa con Agentes', 'BIG school (mouredev) · 6 h', 'Agosto 2026', 'certificados/bigschool-programa-con-agentes.pdf'],
+    ['Desarrollo con IA: de 0 a Producción', 'BIG school (mouredev) · 6 h', 'Agosto 2026', 'certificados/bigschool-de-0-a-produccion.pdf']
   ],
 
   experiencia: [

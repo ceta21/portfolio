@@ -123,7 +123,8 @@ ul{list-style:none}
 .row__t{font-weight:600;font-size:clamp(1.1rem,2vw,1.8rem);letter-spacing:-.03em;line-height:1.1}
 .row__s{color:var(--mute);font-size:.92rem;transition:color .4s}
 .row:hover .row__s{color:#CFE0FF}
-.row__d{text-align:right}
+.row__d{justify-self:end;align-self:center;width:max-content;max-width:100%;text-align:center;font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:.9rem;font-weight:600;line-height:1.2;color:var(--royal);background:#fff;border:1px solid rgba(29,78,216,.28);border-radius:999px;padding:.45rem 1.05rem;transition:background .4s,color .4s,border-color .4s}
+.row:hover .row__d{background:transparent;color:#fff;border-color:var(--cyan)}
 .row__a{display:flex;width:max-content;align-items:center;gap:.5rem;margin-top:.4rem;color:var(--accent);font-weight:600;font-size:.82rem}
 .row__a{font-size:.95rem;gap:.55rem}
 .row__a::before{content:"";width:1.25em;height:1.25em;flex:none;background:currentColor;transition:transform .4s var(--ease);
@@ -193,7 +194,7 @@ ul{list-style:none}
   .profile__photo{max-width:340px;margin-bottom:2rem}
   .sec__head .num{grid-column:1/13;padding:0 0 .3rem}.sec__head h2{grid-column:1/13}
   .row__in{grid-template-columns:2rem 1fr;row-gap:.3rem}
-  .row__s,.row__d{grid-column:2;text-align:left}
+  .row__s,.row__d{grid-column:2;text-align:left}.row__d{justify-self:start;margin-top:.4rem}
   .rows--proj .row__in{grid-template-columns:2rem 1fr}
   .exp .rows{margin:0 var(--pad);padding:0}.exp__photo{margin-top:2rem}
   .contact a,.contact div{grid-column:1/13;padding-bottom:1.4rem}
