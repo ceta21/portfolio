@@ -113,6 +113,9 @@ ul{list-style:none}
 .row__a:hover::after{transform:translate(3px,-3px)}
 .row:hover .row__a{color:#ff5a74}
 .sub{margin:clamp(2.5rem,6vw,5rem) 0 1rem}
+.rows--proj .row__t a::after{content:"";position:absolute;inset:0;z-index:2}
+.rows--proj .row:has(a){cursor:pointer}
+.rows--proj .row__t a:focus-visible::after{outline:2px solid var(--red);outline-offset:-2px}
 .rows--proj .row__in{grid-template-columns:3rem 4fr 5fr 3fr}
 .rows--proj .row__t{font-size:clamp(1.6rem,4vw,3.6rem);letter-spacing:-.05em}
 
