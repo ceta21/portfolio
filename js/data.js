@@ -18,7 +18,7 @@ window.DATA = {
 
   stats: [
     { n: 154, suf: 'h', t: 'Prácticas en empresa' },
-    { n: 5, suf: '', t: 'Cursos complementarios' },
+    { n: 9, suf: '', t: 'Cursos complementarios' },
     { n: 9, suf: '', t: 'Competencias digitales' },
     { n: 'B2', suf: '', t: 'Inglés · certificación Cambridge B2 en proceso' }
   ],
@@ -35,7 +35,11 @@ window.DATA = {
     ['CodeIgniter 4 desde cero: CRUD, tienda online y API REST', 'Udemy · 64,5 h', 'Junio 2026', 'certificados/udemy-codeigniter-4.pdf'],
     ['Desarrollo Profesional en Data e Inteligencia Artificial para la Toma de Decisiones Empresariales', 'Escuela de Empresa', '2026'],
     ['Desarrollo con IA: Programa con Agentes', 'BIG school (mouredev) · 6 h', 'Agosto 2026', 'certificados/bigschool-programa-con-agentes.pdf'],
-    ['Desarrollo con IA: de 0 a Producción', 'BIG school (mouredev) · 6 h', 'Agosto 2026', 'certificados/bigschool-de-0-a-produccion.pdf']
+    ['Desarrollo con IA: de 0 a Producción', 'BIG school (mouredev) · 6 h', 'Agosto 2026', 'certificados/bigschool-de-0-a-produccion.pdf'],
+    ['Introduction to AI', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-introduction-to-ai.pdf'],
+    ['Maximize Productivity With AI Tools', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-maximize-productivity-ai-tools.pdf'],
+    ['Discover the Art of Prompting', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-discover-art-of-prompting.pdf'],
+    ['Stay Ahead of the AI Curve', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-stay-ahead-of-the-ai-curve.pdf']
   ],
 
   experiencia: [
