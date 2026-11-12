@@ -18,7 +18,7 @@ window.DATA = {
 
   stats: [
     { n: 154, suf: 'h', t: 'Prácticas en empresa' },
-    { n: 9, suf: '', t: 'Cursos complementarios' },
+    { n: 10, suf: '', t: 'Cursos complementarios' },
     { n: 9, suf: '', t: 'Competencias digitales' },
     { n: 'B2', suf: '', t: 'Inglés · certificación Cambridge B2 en proceso' }
   ],
@@ -39,6 +39,7 @@ window.DATA = {
     ['Introduction to AI', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-introduction-to-ai.pdf'],
     ['Maximize Productivity With AI Tools', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-maximize-productivity-ai-tools.pdf'],
     ['Discover the Art of Prompting', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-discover-art-of-prompting.pdf'],
+    ['Use AI Responsibly', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-use-ai-responsibly.pdf'],
     ['Stay Ahead of the AI Curve', 'Google · Coursera', 'Noviembre 2026', 'certificados/google-stay-ahead-of-the-ai-curve.pdf']
   ],
 
